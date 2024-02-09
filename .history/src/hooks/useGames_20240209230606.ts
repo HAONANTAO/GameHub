@@ -4,11 +4,8 @@ const useGames = (
   selectedGenre: Genres | null,
   selectedPlatform: Platform | null,
 ) => {
-  return useData<Games>(
-    "/games",
-    { params: { genres: selectedGenre?.id, platforms: selectedPlatform?.id } },
-
-    [selectedGenre?.id, selectedPlatform?.id],
-  );
+  return useData<Games>("/games", { params: { genres: selectedGenre?.id } }, [
+    selectedGenre?.id,
+  ]);
 };
 export default useGames;

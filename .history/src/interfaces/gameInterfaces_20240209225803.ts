@@ -1,11 +1,11 @@
 //basic return result json format
 
-interface Platform {
-  platform?: any;
-  id: number;
-  name: string;
-  slug: string;
-}
+// interface Platform {
+//   platform: any;
+//   id: number;
+//   name: string;
+//   slug: string;
+// }
 interface Games {
   id: string;
   name: string;
@@ -29,4 +29,4 @@ interface FetchResponse<T> {
   count: number;
   results: T[];
 }
-export type { Games, FetchGame, Platform, Genres, FetchResponse };
+export type { Games, FetchGame, Genres, FetchResponse };

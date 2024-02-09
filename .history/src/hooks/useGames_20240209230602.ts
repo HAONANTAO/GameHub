@@ -1,0 +1,8 @@
+import useData from "./useData.ts";
+import { Games, Genres } from "../interfaces/gameInterfaces.ts";
+const useGames = (selectedGenre: Genres | null, selectedPlatform) => {
+  return useData<Games>("/games", { params: { genres: selectedGenre?.id } }, [
+    selectedGenre?.id,
+  ]);
+};
+export default useGames;

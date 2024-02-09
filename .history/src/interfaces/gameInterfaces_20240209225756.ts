@@ -1,11 +1,11 @@
 //basic return result json format
 
-interface Platform {
-  platform?: any;
-  id: number;
-  name: string;
-  slug: string;
-}
+// interface Platform {
+//   platform: any;
+//   id: number;
+//   name: string;
+//   slug: string;
+// }
 interface Games {
   id: string;
   name: string;

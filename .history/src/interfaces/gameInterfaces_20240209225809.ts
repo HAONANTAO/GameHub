@@ -1,7 +1,7 @@
 //basic return result json format
 
 interface Platform {
-  platform?: any;
+  platform: any;
   id: number;
   name: string;
   slug: string;

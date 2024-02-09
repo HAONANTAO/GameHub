@@ -1,6 +1,5 @@
-import { Platform } from "../interfaces/gameInterfaces";
 import useData from "./useData";
-
+im
 // interface Platform {
 //   id: number;
 //   name: string;
