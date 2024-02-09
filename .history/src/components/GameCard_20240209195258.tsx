@@ -17,7 +17,7 @@ const GameCard = (props: Props) => {
         <Heading fontSize={"2xl"}>{game.name}</Heading>
         <PlatformIconList
           platforms={game.parent_platforms.map(
-            (p: Platform) => p.platform,
+            (p: { platform: any; }) => p.platform,
           )}></PlatformIconList>
       </CardBody>
     </Card>

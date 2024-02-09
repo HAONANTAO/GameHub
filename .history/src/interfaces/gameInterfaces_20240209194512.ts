@@ -10,9 +10,7 @@ interface Games {
   id: string;
   name: string;
   background_image: string;
-  parent_platforms: {
-    map: any; platform: Platform 
-};
+  parent_platforms: { platform: Platform };
 }
 interface FetchGame {
   count: number;

@@ -1,22 +1,19 @@
 //basic return result json format
 
-interface Platform {
-  platform: any;
+interface platform{
   id: number;
   name: string;
-  slug: string;
+  slug: string
 }
 interface Games {
   id: string;
   name: string;
   background_image: string;
-  parent_platforms: {
-    map: any; platform: Platform 
-};
+  parent_platforms:
 }
 interface FetchGame {
   count: number;
   results: Games[];
 }
 
-export type { Games, FetchGame, Platform };
+export type { Games, FetchGame };
