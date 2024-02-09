@@ -29,7 +29,7 @@ function App() {
           </GridItem>
         </Show>
         <GridItem area="main">
-          <PlatformSelector></PlatformSelector>
+          <PlatformSelector
           <GameGrid selectedGenre={selectedGenre}></GameGrid>
         </GridItem>
       </Grid>
