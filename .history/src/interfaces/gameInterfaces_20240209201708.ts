@@ -11,10 +11,9 @@ interface Games {
   name: string;
   background_image: string;
   parent_platforms: {
-    map: any;
-    platform: Platform;
-  };
-  metacritic: number;
+    map: any; platform: Platform 
+};
+metacritic: number
 }
 interface FetchGame {
   count: number;
