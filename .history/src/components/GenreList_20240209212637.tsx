@@ -1,3 +1,6 @@
+import React from "react";
+import useData from "../hooks/useData";
+import { Genres } from "../interfaces/gameInterfaces";
 import useGenres from "../hooks/useGenres";
 const GenreList = () => {
   const { data } = useGenres();

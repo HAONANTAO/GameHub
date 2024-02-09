@@ -1,7 +1,10 @@
 import { Genres } from "../interfaces/gameInterfaces";
-import useData from "../hooks/useData";
 
+interface FetchGenresResponse {
+  count: number;
+  results: Genres[];
+}
 const useGenres = () => {
-  return useData<Genres>("genres");
+  useData<Genres>("genres");
 };
 export default useGenres;

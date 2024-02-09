@@ -28,4 +28,4 @@ interface FetchResponse<T> {
   count: number;
   results: T[];
 }
-export type { Games, FetchGame, Platform, Genres, FetchResponse };
+export type { Games, FetchGame, Platform };

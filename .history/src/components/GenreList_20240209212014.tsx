@@ -1,12 +1,14 @@
+import React from "react";
 import useGenres from "../hooks/useGenres";
+import { genre } from "../interfaces/gameInterfaces";
 const GenreList = () => {
-  const { data } = useGenres();
+  const { genres } = useData<Genres>();
   return (
-    <ul>
-      {data.map((g) => (
+    <>
+      {genres.map((g) => (
         <li key={g.id}>{g.name}</li>
       ))}
-    </ul>
+    </>
   );
 };
 
