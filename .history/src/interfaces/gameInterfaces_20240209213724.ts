@@ -23,7 +23,7 @@ interface FetchGame {
 interface Genres {
   id: number;
   name: string;
-  image_background: string;
+  image_backgroun
 }
 interface FetchResponse<T> {
   count: number;
