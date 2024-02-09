@@ -6,7 +6,6 @@ import { Games, FetchGame } from "../interfaces/gameInterfaces.ts";
 import useGames from "../hooks/useGames.ts";
 import GameCard from "./GameCard.tsx";
 import GameCardSkeleton from "./GameCardSkeleton.tsx";
-import GameCardContainer from "./GameCardContainer.tsx";
 
 const GameGrid = () => {
   const { error, game, isLoading } = useGames();
@@ -20,11 +19,7 @@ const GameGrid = () => {
         padding="10px"
         spacing={10}>
         {isLoading &&
-          skeletons.map((sk) => (
-            <GameCardContainer>
-              <GameCardSkeleton key={sk}></GameCardSkeleton>
-            </GameCardContainer>
-          ))}
+          skeletons.map((sk) => <<GameCardSkeleton key={sk}></GameCardSkeleton>)}
         {game.map((g) => (
           <GameCard key={g.id} game={g}>
             {g.name}

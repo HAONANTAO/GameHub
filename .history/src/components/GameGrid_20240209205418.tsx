@@ -6,7 +6,6 @@ import { Games, FetchGame } from "../interfaces/gameInterfaces.ts";
 import useGames from "../hooks/useGames.ts";
 import GameCard from "./GameCard.tsx";
 import GameCardSkeleton from "./GameCardSkeleton.tsx";
-import GameCardContainer from "./GameCardContainer.tsx";
 
 const GameGrid = () => {
   const { error, game, isLoading } = useGames();
