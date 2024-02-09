@@ -9,8 +9,7 @@ import App from "./App.tsx";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <ColorModeScript
-        initialColorMode={theme.config.initialColorMode}></ColorModeScript>
+      <ColorModeScript initialColorMode={theme.config.c}></ColorModeScript>
       <App />
     </ChakraProvider>
   </React.StrictMode>,
