@@ -1,7 +1,6 @@
 import { HStack, Image, Text } from "@chakra-ui/react";
 //first import as jsObject
 import logo from "../assets/logo.webp";
-import ColormodeSwtich from "./ColormodeSwtich";
 const Navbar = () => {
   return (
     <>

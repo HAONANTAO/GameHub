@@ -11,11 +11,16 @@ function App() {
         }}>
         <GridItem area="nav">
           <Navbar></Navbar>
+          <ColormodeSwtich></ColormodeSwtich>
         </GridItem>
         <Show above="lg">
-          <GridItem area="aside">aside</GridItem>
+          <GridItem area="aside" bg="gold">
+            aside
+          </GridItem>
         </Show>
-        <GridItem area="main">main</GridItem>
+        <GridItem area="main" bg="dodgerblue">
+          main
+        </GridItem>
       </Grid>
     </>
   );
