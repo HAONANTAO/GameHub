@@ -20,11 +20,11 @@ const useGames = () => {
         });
         console.log("Data received:", response.data.results);
         setGame(response.data.results);
-      } catch (err: any) {
+      } catch (err) {
         console.error("Error fetching data:", err.message);
         //check the cancer error first
         if (err instanceof CanceledError) return;
-        setError(err.message);
+        setError(error.message);
       }
     };
     fetchData();

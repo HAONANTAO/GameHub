@@ -5,7 +5,7 @@ import { Games, FetchGame } from "../interfaces/gameInterfaces.ts";
 import { CanceledError } from "axios";
 const useGames = () => {
   const [game, setGame] = useState<Games[]>([]);
-  const [error, setError] = useState<string>("");
+  const [error, setError] = useState<string></string>("");
 
   //after first render running once
   useEffect(() => {
@@ -20,11 +20,11 @@ const useGames = () => {
         });
         console.log("Data received:", response.data.results);
         setGame(response.data.results);
-      } catch (err: any) {
-        console.error("Error fetching data:", err.message);
+      } catch (error) {
+        console.error("Error fetching data:", error.message);
         //check the cancer error first
-        if (err instanceof CanceledError) return;
-        setError(err.message);
+        if (error instanceof CanceledError) return;
+        setError(error.message);
       }
     };
     fetchData();

@@ -20,10 +20,10 @@ const useGames = () => {
         });
         console.log("Data received:", response.data.results);
         setGame(response.data.results);
-      } catch (err: any) {
+      } catch (err) {
         console.error("Error fetching data:", err.message);
-        //check the cancer error first
-        if (err instanceof CanceledError) return;
+        // Check for cancellation error
+        if (axios.isCancel(err)) return;
         setError(err.message);
       }
     };
