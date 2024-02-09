@@ -13,10 +13,10 @@ import { Genres } from "../interfaces/gameInterfaces";
 
 interface Props {
   onSelectedGenre: (gener: Genres) => void;
-  selectedGenre: Genres | null;
+  selectedGenre: Genre | null;
 }
 
-const GenreList = ({ selectedGenre, onSelectedGenre }: Props) => {
+const GenreList = ({ onSelectedGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
   if (error) return null;
   if (isLoading) return <Spinner></Spinner>;
@@ -30,7 +30,6 @@ const GenreList = ({ selectedGenre, onSelectedGenre }: Props) => {
               borderRadius={8}
               src={getCroppedImageUrl(g.image_background)}></Image>
             <Button
-              fontWeight={g.id === selectedGenre?.id ? "bold" : "normal"}
               onClick={() => onSelectedGenre(g)}
               fontSize="lg"
               variant="link">
