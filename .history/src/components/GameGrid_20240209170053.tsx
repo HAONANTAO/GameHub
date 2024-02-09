@@ -6,7 +6,11 @@ import { Games, FetchGame } from "../interfaces/gameInterfaces.ts";
 import useGames from "../hooks/useGames.ts";
 
 const GameGrid = () => {
-  const { error, game } = useGames();
+  const [game, setGame] = useState<Games[]>([]);
+  const [error, setError] = useState("");
+
+ 
+
   return (
     <>
       {error && <Text color={"red"}>{error}</Text>}
