@@ -6,10 +6,9 @@ import { CanceledError } from "axios";
 const useGames = () => {
   const [game, setGame] = useState<Games[]>([]);
   const [error, setError] = useState<string>("");
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading.setLoading]
   //after first render running once
   useEffect(() => {
-    setLoading(true);
     //when abort fetch HTTP requests
     const controller = new AbortController();
 
@@ -19,7 +18,6 @@ const useGames = () => {
         const response = await apiClient.get<FetchGame>("/games", {
           signal: controller.signal,
         });
-        setLoading(false);
         console.log("Data received:", response.data.results);
         setGame(response.data.results);
       } catch (err: any) {
@@ -27,12 +25,11 @@ const useGames = () => {
         //check the cancer error first
         if (err instanceof CanceledError) return;
         setError(err.message);
-        setLoading(true);
       }
     };
     fetchData();
     return () => controller.abort();
   }, []);
-  return { error, game, isLoading };
+  return { error, game };
 };
 export default useGames;

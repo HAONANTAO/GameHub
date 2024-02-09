@@ -33,6 +33,6 @@ const useGames = () => {
     fetchData();
     return () => controller.abort();
   }, []);
-  return { error, game, isLoading };
+  return { error, game };
 };
 export default useGames;

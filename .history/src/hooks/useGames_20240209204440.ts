@@ -23,16 +23,16 @@ const useGames = () => {
         console.log("Data received:", response.data.results);
         setGame(response.data.results);
       } catch (err: any) {
+        
         console.error("Error fetching data:", err.message);
         //check the cancer error first
         if (err instanceof CanceledError) return;
         setError(err.message);
-        setLoading(true);
       }
     };
     fetchData();
     return () => controller.abort();
   }, []);
-  return { error, game, isLoading };
+  return { error, game };
 };
 export default useGames;

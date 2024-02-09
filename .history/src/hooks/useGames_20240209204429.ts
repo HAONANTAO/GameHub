@@ -27,12 +27,11 @@ const useGames = () => {
         //check the cancer error first
         if (err instanceof CanceledError) return;
         setError(err.message);
-        setLoading(true);
       }
     };
     fetchData();
     return () => controller.abort();
   }, []);
-  return { error, game, isLoading };
+  return { error, game };
 };
 export default useGames;
