@@ -28,14 +28,11 @@ const GenreList = ({ onSelectedGenre }: Props) => {
               boxSize="32px"
               borderRadius={8}
               src={getCroppedImageUrl(g.image_background)}></Image>
-            <Button
-              onClick={() => onSelectedGenre(g)}
-              fontSize="lg"
-              variant="link">
+            <Button onClick={() => console.log(g)} fontSize="lg" variant="link">
               {g.name}
             </Button>
           </HStack>
-        </ListItem> 
+        </ListItem>
       ))}
     </List>
   );

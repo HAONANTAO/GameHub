@@ -9,7 +9,7 @@ import GameCardContainer from "./GameCardContainer.tsx";
 interface Props {
   game: Games;
   children: string;
-  key?: string;
+  key: string;
 }
 const GameCard = (props: Props) => {
   const { game } = props;
