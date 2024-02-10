@@ -1,7 +1,7 @@
 import { HStack, Image} from "@chakra-ui/react";
 //first import as jsObject
 import logo from "../assets/logo.webp";
-import ColormodeSwtich from "./ColormodeSwtich";
+import ColormodeSwtich from "./ColormodeSwitch";
 import SearchInput from "./SearchInput";
 
 interface Props {
