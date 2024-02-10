@@ -9,7 +9,7 @@ GameHub is a video game discovery web app that helps you find new and interestin
 
 <p align="center">
   <a href="Web.png">
-    <img src="Web.png" alt="Logo" width="450" height="450">
+    <img src="Web.png" alt="Logo" width="8000" height="500">
   </a>
 
 
