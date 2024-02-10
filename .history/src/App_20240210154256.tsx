@@ -48,7 +48,9 @@ function App() {
             onSelectedPlatform={(platform) =>
               setGameQuery({ ...gameQuery, platform })
             }></PlatformSelector>
-          <GameGrid gameQuery={gameQuery}></GameGrid>
+          <GameGrid
+            gameQuery={gameQuery}selectedPlatform={gameQuery.platform}
+            selectedGenre={gameQuery.genre}></GameGrid>
         </GridItem>
       </Grid>
     </>

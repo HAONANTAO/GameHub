@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Genres, Platform } from "./interfaces/gameInterfaces";
 import PlatformSelector from "./components/PlatformSelector";
 
-export interface GameQuery {
+interface GameQuery {
   genre: Genres | null;
   platform: Platform | null;
 }
@@ -46,9 +46,11 @@ function App() {
           <PlatformSelector
             selectedPlatform={gameQuery.platform}
             onSelectedPlatform={(platform) =>
-              setGameQuery({ ...gameQuery, platform })
+              setGameQuery({...game})
             }></PlatformSelector>
-          <GameGrid gameQuery={gameQuery}></GameGrid>
+          <GameGrid
+            selectedPlatform={selectedPlatform}
+            selectedGenre={selectedGenre}></GameGrid>
         </GridItem>
       </Grid>
     </>

@@ -7,12 +7,14 @@ import GameCardContainer from "./GameCardContainer.tsx";
 import { Genres, Platform } from "../interfaces/gameInterfaces.ts";
 import { GameQuery } from "../App.tsx";
 
-interface Props {
+interface Props {\
   gameQuery: GameQuery;
+  selectedGenre: Genres | null;
+  selectedPlatform: Platform | null;
 }
 
-const GameGrid = ({ gameQuery }: Props) => {
-  const { error, data, isLoading } = useGames(gameQuery);
+const GameGrid = ({ selectedGenre, selectedPlatform }: Props) => {
+  const { error, data, isLoading } = useGames(selectedGenre, selectedPlatform);
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <>

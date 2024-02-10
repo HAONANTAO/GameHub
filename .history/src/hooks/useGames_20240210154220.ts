@@ -11,7 +11,7 @@ const useGames = (gameQuery: GameQuery) => {
       },
     },
 
-    [gameQuery],
+    [gameQuery.g?.id, selectedPlatform?.id],
   );
 };
 export default useGames;

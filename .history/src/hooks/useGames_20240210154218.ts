@@ -4,14 +4,9 @@ import { GameQuery } from "../App.tsx";
 const useGames = (gameQuery: GameQuery) => {
   return useData<Games>(
     "/games",
-    {
-      params: {
-        genres: gameQuery.genre?.id,
-        platforms: gameQuery.platform?.id,
-      },
-    },
+    { params: { genres: gameQuery.genre?.id, platforms: gameQuery.platform?.id } },
 
-    [gameQuery],
+    [selectedGenre?.id, selectedPlatform?.id],
   );
 };
 export default useGames;
