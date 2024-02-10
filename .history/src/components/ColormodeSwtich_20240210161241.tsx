@@ -12,7 +12,7 @@ const ColormodeSwtich = () => {
       {colorMode === "dark" ? (
         <Text>Dark Mode</Text>
       ) : (
-        <Text whiteSpace="nowrap">Light Mode</Text>
+        <Text >Light Mode</Text>
       )}
     </HStack>
   );

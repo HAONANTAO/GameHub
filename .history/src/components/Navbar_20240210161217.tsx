@@ -6,10 +6,11 @@ import SearchInput from "./SearchInput";
 const Navbar = () => {
   return (
     <>
-      <HStack padding={"10px"}>
+      {/*Hstack = horizontal stack line */}
+      <HStack justifyContent={"space-between"} padding={"10px"}>
         <Image src={logo} boxSize={"60px"}></Image>
         <SearchInput></SearchInput>
-        <ColormodeSwtich></ColormodeSwtich>
+        {/* <Text>NavBar</Text> */} <ColormodeSwtich></ColormodeSwtich>
       </HStack>
     </>
   );
