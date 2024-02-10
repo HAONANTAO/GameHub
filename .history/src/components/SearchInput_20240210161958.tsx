@@ -11,7 +11,7 @@ const SearchInput = ({ onSearch }: Props) => {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        if (ref.current) onSearch(ref.current.value);
+        if (ref.current) console.log(ref.current.value);
       }}>
       <InputGroup>
         <InputLeftElement children={<BsSearch></BsSearch>}></InputLeftElement>

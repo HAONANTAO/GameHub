@@ -7,12 +7,12 @@ import SearchInput from "./SearchInput";
 interface Props {
   onSearch: (searchText: string) => void;
 }
-const Navbar = ({ onSearch }: Props) => {
+const Navbar = () => {
   return (
     <>
       <HStack padding={"10px"}>
         <Image src={logo} boxSize={"60px"}></Image>
-        <SearchInput onSearch={onSearch}></SearchInput>
+        <SearchInput></SearchInput>
         <ColormodeSwtich></ColormodeSwtich>
       </HStack>
     </>
