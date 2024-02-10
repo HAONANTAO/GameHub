@@ -1,6 +1,6 @@
 import genres from "../data/genres";
 const useGenres = () => ({
-  data: genres,
+  data: null,
   isLoading: false,
   error: null,
 });
