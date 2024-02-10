@@ -52,7 +52,7 @@ function App() {
                 setGameQuery({ ...gameQuery, platform })
               }></PlatformSelector>
             <SortSelector
-              sortOrder={gameQuery.sortOrder}
+            sortO
               onSelectSortOrder={(sortOrder) =>
                 setGameQuery({ ...gameQuery, sortOrder })
               }></SortSelector>
