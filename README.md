@@ -8,7 +8,7 @@ GameHub is a video game discovery web app that helps you find new and interestin
 <br />
 
 <p align="center">
-  <a href="https://github.com/shaojintian/Best_README_template/">
+  <a href="Web.png">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
