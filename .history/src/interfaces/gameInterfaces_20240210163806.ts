@@ -15,8 +15,7 @@ interface Games {
     platform: Platform;
   };
   metacritic: number;
-  rating_top: number;
-  
+  rating_top
 }
 interface FetchGame {
   count: number;
